@@ -13,7 +13,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="108dp"
         android:layout_marginEnd="8dp"
-        android:text="Verify Your E-mail"
+        android:text="Forgot Password"
         android:textAlignment="center"
         android:textColor="@color/appDark"
         android:textSize="16sp"
@@ -30,7 +30,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:lineSpacingExtra="3sp"
-        android:text="We've sent verification code to your e-mail. Please check your inbox in order to follow the link. If you don't receive it, make sure you've checked spam folder."
+        android:text="Confirm your e-mail and we'll send a password reset link"
         android:textAlignment="center"
         android:textColor="@color/appBlackDisable"
         android:textSize="14sp"
@@ -46,27 +46,38 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/ar_button"
-        android:text="Finish"
+        android:text="Continue"
         android:textColor="@color/appWhiteR"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/et_tilforgot" />
 
-    <TextView
-        android:id="@+id/btn_resend"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/et_tilforgot"
+        android:layout_width="265dp"
+        android:layout_height="51dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        android:text="Resend verification code"
-        android:textColor="@color/appBlue"
-        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_forgotpass" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:passwordToggleDrawable="@drawable/icon_password"
+        app:passwordToggleEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_forgotPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#bcb"
+            android:hint="Username or E-mail Address"
+            android:inputType="text|textEmailAddress"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+    </android.support.design.widget.TextInputLayout>
 
 </android.support.constraint.ConstraintLayout>

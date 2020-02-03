@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Nhome"
+        android:icon="@drawable/bottom_home" />
+    <item
+        android:id="@+id/Nexplore"
+        android:icon="@drawable/bottom_explore" />
+    <item
+        android:id="@+id/Nnotif"
+        android:icon="@drawable/bottom_notif" />
+    <item
+        android:id="@+id/Naccount"
+        android:icon="@drawable/bottom_account" />
+</menu>

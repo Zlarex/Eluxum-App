@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/bgMain"
-    android:background="@color/colorPrimary"
+    android:background="@color/appBlue"
     android:layout_height="match_parent">
 
     <ScrollView
@@ -37,7 +37,7 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/ar_button_w"
                 android:text="Login"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/appBlue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -51,7 +51,7 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/ar_button_l_w"
                 android:text="Sign in"
-                android:textColor="@color/colorStraight"
+                android:textColor="@color/appWhite"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/bMenuLogin" />

@@ -183,7 +183,7 @@
                 android:layout_marginStart="1dp"
                 android:layout_marginTop="23dp"
                 android:text="I agree with the"
-                android:textColor="#787"
+                android:textColor="@color/appBlackDisable"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="@+id/et_tilr4"
                 app:layout_constraintTop_toBottomOf="@+id/et_tilr4" />
@@ -196,7 +196,7 @@
                 android:layout_marginTop="23dp"
                 android:gravity="center_vertical"
                 android:text="term and conditions"
-                android:textColor="#787"
+                android:textColor="@color/appBlue"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/toggleBtn"
                 app:layout_constraintTop_toBottomOf="@+id/et_tilr4" />

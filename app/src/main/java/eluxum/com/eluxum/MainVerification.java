@@ -2,7 +2,6 @@ package eluxum.com.eluxum;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +15,7 @@ public class MainVerification extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verification);
 
-        appFinishReg = findViewById(R.id.btn_finish);
+        appFinishReg = findViewById(R.id.btn_forgotpass);
         appResend = findViewById(R.id.btn_resend);
 
         appFinishReg.setOnClickListener(new View.OnClickListener() {

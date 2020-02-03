@@ -16,9 +16,9 @@
     android:layout_height="match_parent">
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/et_til4"
+        android:id="@+id/et_tilforgot"
         android:layout_width="265dp"
-        android:layout_height="wrap_content"
+        android:layout_height="51dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="8dp"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#bcb"
             android:hint="Username or E-mail Address"
-            android:inputType="textPersonName"
+            android:inputType="text|textEmailAddress"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,11 +52,11 @@
         android:background="@drawable/ar_button"
         android:fontFamily="sans-serif"
         android:text="Sign In"
-        android:textColor="#FFF"
+        android:textColor="@color/appWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgotloginpass" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/et_til"
@@ -67,7 +67,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_til4"
+        app:layout_constraintTop_toBottomOf="@+id/et_tilforgot"
         app:passwordToggleDrawable="@drawable/icon_password"
         app:passwordToggleEnabled="true">
 
@@ -83,12 +83,12 @@
     </android.support.design.widget.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_forgotloginpass"
         android:layout_width="121dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Forgot Password?"
-        android:textColor="#787"
+        android:textColor="@color/appBlackDisable"
         android:textSize="14sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="@+id/et_til"
