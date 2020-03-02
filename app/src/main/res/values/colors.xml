@@ -10,8 +10,10 @@
     <color name="appWhiteR">#faf8f0</color>
     <color name="appBlack">#262626</color>
     <color name="appDark">#444444</color>
-    <color name="appBlueDarker">#42a5f5</color>
+    <color name="appBlueDarker">#3c9deb</color>
     <color name="appBlue">#00bbff</color>
-    <color name="appBlackDisable">#616161</color>
+    <color name="appBlackDisable">#898989</color>
     <color name="appAqua">#85ffda</color>
+    <color name="appGreen">#02dc4b</color>
+    <color name="appBlueDarkest">#0069fd</color>
 </resources>

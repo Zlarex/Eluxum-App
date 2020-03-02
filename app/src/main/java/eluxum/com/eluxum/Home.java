@@ -1,9 +1,11 @@
 package eluxum.com.eluxum;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,13 +17,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class Home extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        loadFragment(new FragmentHome());
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Eluxum");
@@ -36,6 +40,45 @@ public class Home extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(true);
 
+        BottomNavigationView bnavView = (BottomNavigationView)findViewById(R.id.bottomNav);
+
+        bnavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                Fragment fragment = null;
+                switch(menuItem.getItemId()) {
+                    case R.id.Nhome: {
+                        fragment = new FragmentHome();
+                        break;
+                    }
+                    case R.id.Nexplore: {
+                        fragment = new FragmentExplore();
+                        break;
+                    }
+                    case R.id.Nnotif: {
+                        fragment = new FragmentNotif();
+                        break;
+                    }
+                    case R.id.Naccount: {
+                        fragment = new FragmentUser();
+                        break;
+                    }
+                }
+                return loadFragment(fragment);
+            }
+        });
+
+    }
+
+    private boolean loadFragment(Fragment fragment) {
+        if (fragment != null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.baseFrame, fragment)
+                    .commit();
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -67,7 +110,7 @@ public class Home extends AppCompatActivity
         if (id == R.id.item_account) {
             // Handle the camera action
             nav.setVisibility(View.VISIBLE);
-            view.setVisibility(View.GONE);
+            view.setVisibility(View.VISIBLE);
         } else if (id == R.id.item_order) {
 
         } else if (id == R.id.item_wishlist) {
