@@ -106,7 +106,7 @@ public class MainLogin extends AppCompatActivity {
                                 if (!res.isNull("uid"))
                                     DataAccount.uid = res.getString("uid");
                                 if (!res.isNull("created_at")) {
-                                    //String dated = res.getString("created_at");
+                                    DataAccount.created_at= res.getString("created_at").substring(0, 10);
                                 }
 
                                 Toast.makeText(getApplicationContext(), "Login success", Toast.LENGTH_SHORT).show();

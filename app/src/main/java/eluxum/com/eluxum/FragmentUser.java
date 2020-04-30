@@ -29,6 +29,7 @@ public class FragmentUser extends Fragment {
         emt_biography.setText(DataAccount.u_bio);
         emt_address.setText(DataAccount.u_address);
         emt_phone.setText(DataAccount.u_phone_number);
+        emt_createdAt.setText(DataAccount.created_at);
 
         return views;
     }
